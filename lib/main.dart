@@ -5,6 +5,7 @@ import 'package:translator_app/screens/screens.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red),
       ),
-      home: const HomePage(),
+      home: HomePage(),
       initialBinding: HomeBinding(),
       getPages: AppPages.routes,
     );
