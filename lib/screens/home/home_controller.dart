@@ -8,7 +8,7 @@ import 'package:translator_app/utils/storage.dart';
 
 enum LanguageType { source, target }
 
-class HomeController extends GetxController with StateMixin<dynamic> {
+class HomeController extends GetxController {
   var listLanguages = List<Language>.empty().obs;
   var sourceLanguage = 'English'.obs;
   var targetLanguage = 'Vietnamese'.obs;
@@ -22,22 +22,7 @@ class HomeController extends GetxController with StateMixin<dynamic> {
     // TODO: Fetch API
     fetchSupportedLanguages();
     fetchCurrentLanguage();
-    translationText.listen((text) {
-      Future.delayed(Duration(seconds: 2), () {});
-    });
     super.onInit();
-  }
-
-  @override
-  void onReady() {
-    // TODO: show intro dialog
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    // TODO: called just before the Controller is deleted from memory
-    super.onClose();
   }
 
   fetchSupportedLanguages() async {

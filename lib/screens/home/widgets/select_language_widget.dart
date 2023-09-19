@@ -12,7 +12,7 @@ class LanguageWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: const BorderRadius.all(Radius.circular(12)),
       ),
       child: IntrinsicHeight(
